@@ -1,3 +1,4 @@
+<table>
 <?php 
         $opcionais = array();
 
@@ -6,13 +7,9 @@
         $opcionais[] = array("opcionais"=>"vidro eletrico");
         $opcionais[] = array("opcionais"=>"alarme");
         $opcionais[] = array("opcionais"=>"air bag");
-        
-        echo"<pre>";
-        print_r($opcionais);
-        echo"</pre>";
-
+ 
         ?>
-    <table>
+</table>
 
 <table>
     
@@ -28,3 +25,4 @@
     <?php
     }
     ?>
+</table>

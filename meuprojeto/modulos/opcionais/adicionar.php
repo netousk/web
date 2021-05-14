@@ -12,11 +12,7 @@
     <h1 style = 'font-size:30px'> Monte seu Carro </h1>
     <h2 style = 'font-size:20px'> Escolha os opcionais </h2>
 
-    <table border = 5>
-        <td align = "center">
-        <td valign = "tod">
-        <td rowspan = "3">
-        <td colspan = "3">
+    <table>
 
         <form method = "post" action = "opcionais.php" >
             <input type = "checkbox" name = "arcondicionado" value = "ar condicionado"/>ar condicionado<br/>
@@ -27,9 +23,6 @@
 
             <input type = "submit" name = "botao" value = "salvar"/>
         </form>
-
-    <a href="motor.php"><br/>anterior </a>  
-    <a href="cor.php"><br/>proxima</a><br/><br/>
     <input type = "reset" name = "botao" value = "reset"/><br/><br/>
 
         <?php 

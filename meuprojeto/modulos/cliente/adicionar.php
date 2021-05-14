@@ -7,62 +7,44 @@
     <body>
 
     <?php
-    include('classes/cliente.class.php');
+    include('../meuprojeto/classes/cliente.class.php');
     ?>
 
 <font face="sans-serif";>
 
     <h1 style = 'font-size:30px'> Cliente </h1>
-    <p1> <font size=4;>Por favor, preencha os campos abaixo</font> </p1>
-    <h2 style = 'font-size:20px'> Lista </h2>
+    <p1> <font size=4;>Por favor, preencha os campos abaixo</font> </p1><br/><br/>
+    <h2 style = 'font-size:20px'> Lista </h2><br/>
 
-    <table border = 5>
-        <td align = "center">
-        <td valign = "tod">
-        <td rowspan = "3">
-        <td colspan = "3">
-     
+    <table >
+  
 
     <form method = "post" action = "">
-        nome:<input type = "text" placeholder="nome" name = "nome"/><br/><br/>
-        idade:<input type = "text" name = "idade"/><br/><br/>
+        nome:<input type = "text" placeholder="ex: joão" name = "nome"/><br/><br/>
+        idade:<input type = "text" placeholder="ex: 35" name = "idade"/><br/><br/>
         <input type = "radio" name = "sexo" value = "M"/> masculino
-        <input type = "radio" name = "sexo" value = "F"/> feminnino <br/><br/>
-        celular:<input type = "text" name = "celular"/><br/><br/>
-        email:<input type = "text" name = "email"/><br/><br/>
+        <input type = "radio" name = "sexo" value = "F"/> feminino <br/><br/>
+        celular:<input type = "text" placeholder="ex: 99999999" name = "celular"/><br/><br/>
+        email:<input type = "text" placeholder="ex: email@gmail.com" name = "email"/><br/><br/>
+        
         <input type = "submit" name = "botao" value = "salvar"/>
-        <input type = "reset" name = "botao" value = "reset" />      
+        <input type = "reset" name = "botao" value = "reset" />     <br/> <br/>
     </form>
 
-
-        <?php 
-        $nome = $_POST['nome'];
-        $idade = $_POST['idade'];   
-        $sexo = $_POST['sexo'];
-        $celular = $_POST['celular'];
-        $email = $_POST['email'];
-
-        echo "nome: ". $nome."<br/>";
-        echo "idade: ". $idade."<br/>";
-        echo "sexo: ". $sexo."<br/>";
-        echo "celular: ". $celular."<br/>";
-        echo "email: ". $email."<br/>"
-
-        ?>
         <?php
         
         $cliente = new cliente();
-        $cliente->nome = $_POST['nome'];
-        $cliente->idade = $_POST['idade'];
-        $cliente->sexo = $_POST['sexo'];
-        $cliente->celular = $_POST['celular'];
-        $cliente->email = $_POST['email'];
+        $cliente->setNome($_POST['nome']);
+        $cliente->setIdade($_POST['idade']);
+        $cliente->setSexo($_POST['sexo']);
+        $cliente->setCelular($_POST['celular']);
+        $cliente->setEmail($_POST['email']);
 
-        echo "o nome do cliente digitado foi: ".$cliente->nome;
-        echo "a idade do cliente digitado foi: ".$cliente->idade;
-        echo "o sexo do cliente digitado foi: ".$cliente->sexo;
-        echo "o celular do cliente digitado foi: ".$cliente->celular;
-        echo "o email do cliente digitado foi: ".$cliente->email;
+        echo "o nome do cliente digitado foi: ".$cliente->getNome()."<br/>";
+        echo "a idade do cliente digitado foi: ".$cliente->getIdade()."<br/>";
+        echo "o sexo do cliente digitado foi: ".$cliente->getSexo()."<br/>";
+        echo "o celular do cliente digitado foi: ".$cliente->getCelular()."<br/>";
+        echo "o email do cliente digitado foi: ".$cliente->getEmail();
 
         ?>
 </font> 

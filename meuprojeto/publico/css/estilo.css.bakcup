@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(185, 185, 185);
+    background-image: url(""); 
+}
+
+h1{
+    font-family: 'arial';
+    font-size: 14px;
+    color:rgb(70, 49, 185);
+}
+h2{
+    font-family: 'arial';
+    font-size: 14px;
+    color:rgb(168, 0, 0);
+}
+header{
+    background: rgb(70, 49, 185);
+    color: black;
+    width: 100%;
+}
+footer{
+    background: rgb(70, 49, 185);
+    color: black;
+    width: 100%;
+}

@@ -6,14 +6,10 @@
         $modelos[] = array("modelo"=>"gtr");
         $modelos[] = array("modelo"=>"impreza");
         $modelos[] = array("modelo"=>"lancer");
-        
-        echo"<pre>";
-        print_r($modelos);
-        echo"</pre>";
+   
 
         ?>
-    <table>
-
+    
 <table>
     
     <tr>
@@ -28,3 +24,4 @@
     <?php
     }
     ?>
+</table>

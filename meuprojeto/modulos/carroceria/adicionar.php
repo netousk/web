@@ -12,13 +12,10 @@
     <h1 style = 'font-size:30px'> Monte seu Carro </h1>
     <h2 style = 'font-size:20px'> Escolha a Carroceria </h2>
 
-    <table border = 5>
-        <td align = "center">
-        <td valign = "tod">
-        <td rowspan = "3">
-        <td colspan = "3">
+    <table>
         
-    <form method = "post" action = "carroceria.php" >
+        
+    <form method = "post" action = "" >
     <input type = "radio" name = "carroceria" value = "Coupe"/> coupe <br/>
     <img src = "../../../meuprojeto/publico/imagens/coupe.jpg" width="250" height="auto"> <br/>
 
@@ -36,17 +33,17 @@
     <input type = "submit" name = "botao" value = "salvar"/>
     </form>
 
-    <a href="modelo.php"><br/>anterior </a>  
-    <a href="motor.php"><br/>proxima</a><br/><br/>
     <input type = "reset" name = "botao" value = "reset"/><br/><br/>
     
 
-        <?php 
+<?php
+        
+        $carroceria = new carroceria();
+        $carroceria->setCarroceria($_POST['carroceria']);
 
-        $carroceria = $_POST['carroceria'];
-
-        echo "carroceria: ". $carroceria."<br/>";
-
+        echo "a carroceria selecionada foi: ".$carroceria->getCarroceria();
+      
+        
         ?>
 
 </table>

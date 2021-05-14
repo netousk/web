@@ -1,3 +1,4 @@
+<table>
 <?php 
         $cores = array();
 
@@ -7,12 +8,9 @@
         $cores[] = array("cor"=>"azul");
         $cores[] = array("cor"=>"vermelho");
         
-        echo"<pre>";
-        print_r($cores);
-        echo"</pre>";
 
         ?>
-    <table>
+</table>
 
 <table>
     
@@ -28,3 +26,4 @@
     <?php
     }
     ?>
+</table>

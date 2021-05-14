@@ -1,4 +1,4 @@
-
+<table>
         <?php 
         $motores = array();
 
@@ -8,15 +8,12 @@
         $motores[] = array("motor"=>"3.0 L6 turbo");
         $motores[] = array("motor"=>"4.0 V8 biturbo");
         
-        echo"<pre>";
-        print_r($motores);
-        echo"</pre>";
 
         ?>
-    <table>
+</table>
 
 <table>
-    
+ 
     <tr>
         <th>motores</th>
     </tr> 
@@ -29,3 +26,4 @@
     <?php
     }
     ?>
+</table>

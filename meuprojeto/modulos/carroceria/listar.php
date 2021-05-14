@@ -1,3 +1,4 @@
+<table>
 <?php 
         $carrocerias = array();
 
@@ -7,12 +8,9 @@
         $carrocerias[] = array("carroceria"=>"hatchback");
         $carrocerias[] = array("carroceria"=>"pickup");
         
-        echo"<pre>";
-        print_r($carrocerias);
-        echo"</pre>";
 
         ?>
-    <table>
+    </table>
 
 <table>
     
@@ -28,4 +26,4 @@
     <?php
     }
     ?>
-    </body>
+    </table>
